@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #3498db; /* Blue background */
+    color: white; /* White text */
+    text-align: center; /* Center the text */
+    padding: 15px; /* Padding around the text */
+    font-size: 24px; /* Increase font size */
+    width: 100%; /* Full width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow for visual separation */
+}
+
+.input-container {
+    width: 90%;
+    max-width: 400px; /* Larger width on bigger screens */
+    position: relative;
+    margin-top: 20px;
+    display: flex; /* Flexbox for horizontal alignment */
+}
+
+.search-box {
+    flex: 1; /* Take available space */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px 0 0 25px; /* Rounded corners */
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.weather-btn {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 0 25px 25px 0; /* Rounded corners */
+    background-color: #4A90E2; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.weather-btn:hover {
+    background-color: #3498db; /* Darker shade on hover */
+}
+
+#weather-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px; /* Limit max width */
+}
+
+@media (max-width: 600px) {
+    .input-container {
+        flex-direction: column; /* Stack input and button on smaller screens */
+    }
+
+    .search-box, .weather-btn {
+        width: 100%; /* Full width for both input and button */
+        margin: 5px 0; /* Space between them */
+    }
+}
